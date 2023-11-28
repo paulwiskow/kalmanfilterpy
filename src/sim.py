@@ -80,7 +80,7 @@ class Sim:
         # a wind forecast from a server/website
         # env.set_atmospheric_model(type="Forecast", file="GFS")
 
-        env.info()
+        # env.info()
         # %% md
         # Defining our Motor
         # We
@@ -107,8 +107,8 @@ class Sim:
         motor_dry_inertia_xx_yy = motor_dry_mass_kg * \
                                   ((1 / 2) * (motor_diameter_mm / 2000) ** 2 + (1 / 12) * (motor_length_mm / 1000) ** 2)
         motor_dry_inertia_zz = motor_dry_mass_kg * (motor_diameter_mm / 2000) ** 2.0
-        print(motor_dry_inertia_xx_yy)  # looks reasonable
-        print(motor_dry_inertia_zz)
+        # print(motor_dry_inertia_xx_yy)  # looks reasonable
+        # print(motor_dry_inertia_zz)
 
         # Grain Info
         motor_grain_count = 4
@@ -194,8 +194,8 @@ class Sim:
             terminate_on_apogee=True
         )
 
-        print(
-            f"Nominal Apogee: {nominal_flight.apogee - initial_height_m} m, {(nominal_flight.apogee - initial_height_m) * 3.28084} ft")
+        # print(
+        #     f"Nominal Apogee: {nominal_flight.apogee - initial_height_m} m, {(nominal_flight.apogee - initial_height_m) * 3.28084} ft")
         # nominal_flight.z.plot(0, nominal_flight.apogee_time)
         # nominal_flight.all_info()
         nominal_flight.export_data("test.csv", "x", "vx", "y", "vy", "z", "vz", time_step=.1)
