@@ -42,6 +42,8 @@ class Kalman_Filter:
         self.currentCovariance = np.diag([20.0, 10, 20, 10, 20, 10])
         self.predictedCovariance = np.diag([0.0, 0, 0, 0, 0, 0])
 
+
+
     def predict(self):
         self.__updateAcceleration()
         self.__predictState()
