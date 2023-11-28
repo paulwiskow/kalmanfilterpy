@@ -56,8 +56,6 @@ def generatePlottingData(rawData, kalmanData):
     kalZ = []
     kalVz = []
 
-    print(kalmanData)
-
     for data in rawData:
         # time is the first element in the raw data
         rawX.append(data[1])

@@ -39,7 +39,8 @@ class Kalman_Filter:
         self.processNoiseMatrix = np.diag([1.0, 1, 1, 1, 1, 1]) # noise in each of the gps measurements from immeasurable factors, fine tune this with simulation
         self.measurementNoiseMatrix = np.diag([3.0, .005, 3.0, .005, 3.0, .005]) # this will most likely depend on how many satellites we have locked, but we can initialize with constants here
 
-        self.currentCovariance = np.diag([10.0, 5, 10, 5, 10, 5])
+        self.currentCovariance = np.diag([5.0, 1, 5, 1, 5, 1])
+        # Initialized here to use later
         self.predictedCovariance = np.diag([0.0, 0, 0, 0, 0, 0])
 
     # initialConditions in form [x, vx, y, vy, z, vz]
